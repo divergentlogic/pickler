@@ -1,2 +1,4 @@
 api_token: FAKE
 project_id: 1
+stories:
+  label: label1
