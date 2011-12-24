@@ -236,6 +236,11 @@ class Pickler
 
       def modifications
         @modifications ||= {}
+
+        # Add the default story filters
+        pickler.stories.each do |k, v|
+          @modifications[k] = v
+        end
       end
       [:label, :type, :state].each do |o|
         on "--#{o} #{o.to_s.upcase}" do |value|
